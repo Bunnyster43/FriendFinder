@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="description" content="app">
+  <meta name="keywords" content="HTML,JS,JSON">
+  <meta name="author" content="Isaac Simental-Starr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <title>Friend Finder | Survey</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">      
+<div class="page-header">
+<h1 style="font-size: 45px;"></span>Friend Finder Quiz</h1>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"><strong>About You</strong></h3>
+</div>
+<div class="panel-body">
+          
+<h4>Your Full Name</h4>
+<div class="input-group">
+<input id = "formName" class="form-control" type="text" name="name" placeholder="John Smith">
+<span class="input-group-addon">(Required)</span>
+</div>  
+
+<br>
+
+<div class="panel-body">
+          
+<h3><strong>Question 1</strong></h3>
+<h4>You are creative</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 2</strong></h3>
+<h4>You are up for an adventure</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 3</strong></h3>
+<h4>Physical appearance is very important to you</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 4</strong></h3>
+<h4>You like cuddling</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 5</strong></h3>
+<h4>You like to party</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 6</strong></h3>
+<h4>You love to listen to music</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 7</strong></h3>
+<h4>You like to live on the edge</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 8</strong></h3>
+<h4>I'm a traveler</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 9</strong></h3>
+<h4>I'm a dog person</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<h3><strong>Question 10</strong></h3>
+<h4>I'm a cat person</h4>
+<select class="chosen-select">
+<option value="0">Select A Number</option>
+<option value="1">1 (Strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (Strongly Agree)</option>
+</select>
+
+<button id="submitButton" type="submit" class="btn btn-md btn-danger btn-block"><h4><span class="glyphicon glyphicon-send"></span>Submit</h4></button> 
+  
+<br>
+
+<div id="resultsModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h2 class="modal-title"><strong>Meet Your New Friend!</strong></h2>
+</div>
+
+<div class="modal-body">
+  <h2 id="matchName"></h2>
+  <img id="matchImg" src="" alt="Image Not Found" style="max-width: 350px;">
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+
+</div></div></div></div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+
+var allFieldsCompleted;
+$(document).ready(function() {
+$('#submitButton').on('click', function() {
+checkIfComplete(function(){
+if(allFieldsCompleted){
+  collectInputs();
+}
+else{
+  alert('Complete questionnaire before submitting!');
+}}); 
+});
+});
+
+function checkIfComplete(callback){
+var questionsCompleted;
+$('.chosen-select').each(function(){
+if ( $(this).val() == "" ){
+questionsCompleted = false;
+}})
+
+.promise().done(function(){
+if(questionsCompleted == false){
+allFieldsCompleted = false;
+}
+else if( $('#formName').val().trim() == "" ){
+allFieldsCompleted = false;
+}
+else {
+allFieldsCompleted = true;
+}
+callback(); 
+});
+}
+
+function collectInputs(){
+var newFriend = {
+  name: $('#formName').val().trim(),
+  scores: []
+};
+
+var scoresArray = [];
+$('.chosen-select').each(function(){
+scoresArray.push( parseInt( $(this).val() ) ); 
+})
+
+.promise().done(function(){
+newFriend.scores = scoresArray;
+var currentURL = window.location.origin;
+  $.post(currentURL + "/api/friends", newFriend, function(data){
+  $('#matchName').text(data.name);
+  $('#matchImg').attr('src', data.photo);
+  $("#resultsModal").modal('toggle');
+  });
+});
+}
+</script>
+</body>
+</html>

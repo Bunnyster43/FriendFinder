@@ -15,5 +15,13 @@
   "keywords": [],
   "author": "Isaac Simental-Starr",
   "license": "ISC",
-  "description": ""
+  "description": "# Node and Express Servers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunnyster43/FriendFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bunnyster43/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Bunnyster43/FriendFinder#readme"
 }

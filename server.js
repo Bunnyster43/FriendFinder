@@ -13,5 +13,5 @@ require(path.join(__dirname, './app/routing/api-routes.js'))(app);
 require(path.join(__dirname, './app/routing/html-routes.js'))(app);
 
 app.listen(PORT, function() {
-console.log("App listening On PORT: " + PORT);
+console.log("Server listening on: http://localhost:" + PORT);
 });
